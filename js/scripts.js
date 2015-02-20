@@ -25,4 +25,7 @@ $(document).ready(function() {
 
     event.preventDefault();
   });
+
+  $('select').selectToAutocomplete();
+
 });
