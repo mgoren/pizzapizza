@@ -60,10 +60,13 @@ $(document).ready(function() {
     pizza.init(inputtedSize, inputtedTopping);
     if (pizza.legit()) {
       var slices = pizza.numSlices();
+      var cost = pizza.getCost();
       if(slices === 1) {
-        $("#results h5").text("We don't cut tiny " + pizza.topping + " pizzas!");
+        $("#results-slices").text("We don't cut tiny " + pizza.topping + " pizzas!");
+        $("#results-cost").text("But we will charge you $" + cost + ".")
       } else {
-        $("#results h5").text("We cut your " + pizza.size + " inch " + pizza.topping + " pizza into " + slices + " slices.");
+        $("#results-slices").text("We cut your " + pizza.size + " inch " + pizza.topping + " pizza into " + slices + " slices.");
+        $("#results-cost").text("It will cost you $" + cost + ".")
       }
       displayImg(slices, pizza.topping);
       $("#results").show();
