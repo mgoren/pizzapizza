@@ -7,7 +7,7 @@ body {
   box-shadow: 0 2px 2px #4A2D74;
   color: #111;
   width: 80%;
-  margin: 3em auto;
+  margin: 2em auto;
   padding: 3em;
   position: relative;
   border-radius: 15px;
@@ -61,4 +61,13 @@ fieldset[disabled] .btn-custom.active {
   padding: 10px;
   border: solid 5px #6A123D;
   text-align: center;
+}
+
+figure {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.page-header {
+  margin: 0;
 }
