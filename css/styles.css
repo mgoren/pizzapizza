@@ -22,3 +22,13 @@ ul {
 .btn {
   margin-top: 50px;
 }
+
+#error h5 {
+  color: red;
+}
+
+#results, #error {
+  display: none;
+  padding: 10px 10px 10px 20px;
+  border: solid 5px #6A123D;
+}

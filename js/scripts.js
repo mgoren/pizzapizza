@@ -15,23 +15,31 @@ var Pizza = {
   }
 }
 
+var cleanPage = function() {
+  $("#input-size").val("");
+  $("#input-topping").val("");
+  $("#results").hide();
+  $("#error").hide();
+}
 
 
 $(document).ready(function() {
   $("#form-pizza").submit(function(event) {
     var inputtedSize = parseInt($("#input-size").val());
     var inputtedTopping = $("#input-topping").val();
-    $("#input-size").val("");
-    $("#input-topping").val("");
+    cleanPage();
     var pizza = Object.create(Pizza);
     pizza.init(inputtedSize, inputtedTopping);
-    var slices = pizza.numSlices();
-
-    $("#results h5").text("We will cut your " + pizza.size + " inch " + pizza.topping + " pizza into " + slices + " slices.");
+    if (pizza.legit()) {
+      var slices = pizza.numSlices();
+      $("#results h5").text("We will cut your " + pizza.size + " inch " + pizza.topping + " pizza into " + slices + " slices.");
+      $("#results").show();
+    } else {
+      $("#error h5").text("How do you expect us to slice a " + pizza.size + " inch pizza?!?");
+      $("#error").show();
+    }
 
     event.preventDefault();
   });
-
-  $('select').selectToAutocomplete();
 
 });
