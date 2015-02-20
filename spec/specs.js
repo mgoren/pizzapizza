@@ -16,4 +16,12 @@ describe("Pizza", function() {
     });
   });
 
+  describe("legit", function() {
+    it("determines if pizza is legit size", function() {
+      var myPizza = Object.create(Pizza);
+      myPizza.init(2, "cheese");
+      expect(myPizza.legit()).to.equal(false);
+    })
+  })
+
 });

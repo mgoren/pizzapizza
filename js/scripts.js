@@ -8,6 +8,10 @@ var Pizza = {
     else if (this.size < 21) { return 6; }
     else if (this.size < 36) { return 12; }
     else { return 24; }
+  },
+  legit: function() {
+    if (this.size < 4 || this.size > 60) { return false; }
+    return true;
   }
 }
 
