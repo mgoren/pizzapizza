@@ -14,15 +14,24 @@ var Pizza = {
   legit: function() {
     if (this.size < 4 || this.size > 60) { return false; }
     return true;
+  },
+  getCost: function() {
+    var cost = 10;
+    if (this.size > 12) { cost += 3; }
+    if (this.size > 20) { cost += 5; }
+    if (this.size > 40) { cost += 10; }
+    if (this.topping === "vegetable") { cost += 2; }
+    if (this.topping === "pepperoni") { cost += 50; }
+    return cost;
   }
-}
+};
 
 var cleanPage = function() {
   $("#input-size").val("");
   $("#input-topping").val("");
   $("#results").hide();
   $("#error").hide();
-}
+};
 
 var displayImg = function(slices, topping) {
   switch(topping) {
@@ -39,7 +48,7 @@ var displayImg = function(slices, topping) {
     case "pepperoni":
         $("#results figure").html("<img src='img/pepperoni" + slices + ".png'>");
   }
-}
+};
 
 
 $(document).ready(function() {
