@@ -11,8 +11,8 @@ describe("Pizza", function() {
   describe("numSlices", function() {
     it("determines num of slices based on size", function() {
       var myPizza = Object.create(Pizza);
-      myPizza.init(30, "cheese");
-      expect(myPizza.numSlices()).to.equal(12);
+      myPizza.init(16, "cheese");
+      expect(myPizza.numSlices()).to.equal(8);
     });
   });
 
