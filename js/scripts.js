@@ -17,6 +17,8 @@ $(document).ready(function() {
   $("#form-pizza").submit(function(event) {
     var inputtedSize = parseInt($("#input-size").val());
     var inputtedTopping = $("#input-topping").val();
+    $("#input-size").val("");
+    $("#input-topping").val("");
     var pizza = Object.create(Pizza);
     pizza.init(inputtedSize, inputtedTopping);
     var slices = pizza.numSlices();
