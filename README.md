@@ -3,7 +3,7 @@ Pizza Pizza
 
 by Mike Goren
 
-This is a simple javascript application to do something with pizza.
+This is a simple javascript application to slice your pizza in bizarre ways.
 
 Installation
 ------------
