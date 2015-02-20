@@ -1,0 +1,65 @@
+body {
+  background-color: #19053A;
+}
+
+.container {
+  background: white;
+  box-shadow: 0 2px 2px #4A2D74;
+  color: #111;
+  width: 80%;
+  margin: 3em auto;
+  padding: 3em;
+  position: relative;
+  border-radius: 15px;
+}
+
+#result, #error {
+  display: none;
+  margin-top: 2em;
+  text-align: center;
+}
+
+#error {
+  color: red;
+}
+
+.list {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.list:hover {
+  text-decoration: underline;
+  color: darkCyan;
+}
+
+#list-tasks h2 {
+  display: inline-block;
+}
+
+.tasks-page {
+  display: none;
+}
+
+#list-display {
+  display: none;
+  margin-left: 15px;
+}
+
+.delete {
+  color: #b00;
+  margin-left: 5px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+[id^="task_"] {
+  cursor: pointer;
+}
+
+.glyphicon-check {
+  color: #090;
+}
